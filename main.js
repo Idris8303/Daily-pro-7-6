@@ -2,18 +2,34 @@
 // Define a function max() that takes two numbers as arguments and returns the largest of them. Use the if-then-else construct available in JavaScript.
 // Then, write and example of using the function.
 
-function max(){
+function max(num1, num2){
+  if(num1 > num2){
+    return num1;
+  } else{
+    return num2;
+  }
     //
 }
-
+console.log(max(6,4));
 
 // 2.
 // Define a function maxOfThree() that takes three numbers as arguments and returns the largest of them.
 // Then, write and example of using the function.
 
-function maxOfThree(){
-    // Your answer here
+function maxOfThree(num1, num2, num3){
+    if(num1 > num2 && num1 > num3){
+      return num1;
+    }else if (num2 > num1 && num2 > num3) {
+      return num2;
+
+    }else{
+      return num3;
+    }
 }
+
+
+
+  console.log(maxOfThree(12, 6, 32));
 
 
 // 3.
@@ -21,24 +37,39 @@ function maxOfThree(){
 // Then, write and example of using the function.
 
 function isVowel(char){
-    // Your answer here
+  if (char === 'a' || char === 'e' || char === 'i' || char ==='o' || char === 'u'){
+    return true;
+  }else{
+    return false;
+  }
+
 }
+
+console.log(isVowel('a'));
+
+
 
 
 // 4.
 // Write a function called `sum` that takes two parameters and returns the sum of those 2 numbers.
 // Then, write and example of using the function.
+function sum(num1, num2){
+  return num1 + num2;
+
+}
 
 
+
+console.log(sum(12,6));
 
 // 5.
 // Write a function named `avg` that takes 3 parameters and returns the average of those 3 numbers.
 // Then, write and example of using the function.
 function avg(num1, num2, num3) {
-  return num1 + num2 + num3 / 3;
+  return (num1 + num2 + num3) / 3;
 }
-let sumNumbers = avg(2, 4, 8);
-console.log(avg(2, 4, 8) === 4.6666);
+
+console.log(avg(2, 4, 8));
 
 
 
@@ -48,12 +79,10 @@ console.log(avg(2, 4, 8) === 4.6666);
 // 6.
 // Write a function called `getLength` that takes one parameter (a string) and returns the length
 // Then, write and example of using the function.
-function getLength(add){
-  if ('add'){
-  }
-    return 'Length';
+function getLength(derp){
+  return derp;
 }
-console.log(getLength('add'));
+console.log(getLength('Becky'));
 
 
 
@@ -74,7 +103,7 @@ function greaterThan (num1, num2) {
     return false;
   }
 }
-console.log(greaterThan(6, 4) === true);
+console.log(greaterThan(4, 6));
 
 
 
@@ -84,10 +113,10 @@ console.log(greaterThan(6, 4) === true);
 // is formated like "Hello, Name!" where *Name*
 // is the parameter that was passed in.
 // Then, write and example of using the function.
-function greet (Hello) {
-  return 'Hello Jake!';
+function greet (name) {
+  return 'Hello, ' + name + '!';
   }
-  console.log(greet('Hello Jake!'));
+  console.log(greet('Jake'));
 
 
 
@@ -104,3 +133,10 @@ function greet (Hello) {
 // words: "quick", "fox", "fence"
 // sentence: "quick brown fox jumps over the fence"
 // Then, write and example of using the function.
+function madlib(word1, word2, word3, word4){
+
+
+  return('This' + ' ' + word1 + ' ' + word2 + ' ' + word3 + ' ' + word4 + '.');
+}
+
+console.log(madlib('is', 'function', 'you', 'guys'));
